@@ -173,7 +173,7 @@ public class User {
             JPanel libModulePanel = new JPanel();
             JLabel libModuleText = new JLabel("Book Rental System");
             JLabel libBookList = new JLabel("List of Books");
-            JFrame showpasswordsPanel = new JFrame();
+            
             
             
             libModuleText.setBounds(180, 20, 300, 40);
