@@ -1,0 +1,58 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class LoginPage extends User{
+    
+    public static void main(String[] args) {
+		LoginPage();
+		
+	}
+    public static void LoginPage() {
+		 
+		JFrame libraryManagementDashboard = new JFrame(" NU LIBRARY SYSTEM ");    
+		JPanel mainPanel = new JPanel();
+		JLabel libraryManagementLabel = new JLabel("Library Management - JavaTpoint");
+		JButton adminLoginButton = new JButton("Admin Login");
+		JButton librarianLoginButton = new JButton("Librarian Login");
+		
+		libraryManagementLabel.setBounds(100, 30, 200, 40);
+		libraryManagementLabel.setLayout(null);
+		libraryManagementLabel.setFont(new Font("Times New Roman", Font.BOLD, 12));    
+		
+		adminLoginButton.setBounds(120, 100, 150, 40);
+		adminLoginButton.setFocusable(false);
+		adminLoginButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				libraryManagementDashboard.dispose();
+				Adminlogin();
+			}
+		});
+		
+		librarianLoginButton.setBounds(120, 160, 150, 40);
+		librarianLoginButton.setFocusable(false);
+		librarianLoginButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				libraryManagementDashboard.dispose();
+				librarianLogin();
+			}
+		});
+		
+		mainPanel.setLayout(null);
+		mainPanel.add(libraryManagementLabel);
+		mainPanel.add(adminLoginButton);
+		mainPanel.add(librarianLoginButton);
+		
+		
+		libraryManagementDashboard.setLocation(400, 100);
+		libraryManagementDashboard.setSize(400, 300);
+		libraryManagementDashboard.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		libraryManagementDashboard.setLayout(null);
+		libraryManagementDashboard.setVisible(true);	
+		libraryManagementDashboard.add(mainPanel);
+		libraryManagementDashboard.add(libraryManagementLabel);
+		libraryManagementDashboard.add(adminLoginButton);
+		libraryManagementDashboard.add(librarianLoginButton);
+	}
+}
